@@ -6,13 +6,20 @@
 </head>
 <body>
 
-	<form action="index.html" method="post">
+	<form action="index.html" method="post" onsubmit="return formCheck();">
 			제목 : <input type="text" name="title"><br><br>
 			작성자 : <input type="text" name="writer"><br><br>
 			날짜 : <input type="text" name="date"><br><br>
 			<input type="submit" value="전송">			
 				
 	</form>
-
+	<script>
+	
+		formcheck(){
+			alert(document.form[0].title.value); //title에 입력된 값을 출력한다
+		}
+		
+	</script>
+	
 </body>
 </html>
