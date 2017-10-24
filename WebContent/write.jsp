@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"  pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +8,13 @@
 </head>
 <body>
 
-	<form action="index.html" method="post" onsubmit="return formCheck();">
+	<form action="insert.jsp" method="post" onsubmit="return formCheck();">
 			제목 : <input type="text" name="title"><br><br>
 			작성자 : <input type="text" name="writer"><br><br>
 			내용 : <input type="text" name="content" ><br><br>
-			날짜 : <input type="text" name="date"><br><br>
+			날짜 : <input type="text" name="regdate"><br><br>
 			
-			<input type="submit" value="제출">			
+			<input type="submit" value="제출" >			
 				
 	</form>
 	<script>

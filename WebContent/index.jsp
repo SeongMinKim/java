@@ -1,10 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"  pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>CURD게시판을 향해서</title>
 </head>
+<%
+	int idx =1;
+	String title = request.getParameter("title");
+	String writer = request.getParameter("writer");
+	String regdate = request.getParameter("regdate");
+    int count = 10000;
+	String content = request.getParameter("content");
+%>
+
 <body>
 
 	<h1>게시판을 향해서</h1>
@@ -18,14 +28,14 @@
 			<th>조회수</th>
 		</tr>
 		<tr>
-			<td>1</td>
-			<td>본격</td>
-			<td>게시판 짜기</td>
-			<td>오늘</td>
-			<td>1000000</td>
+			<td><%=idx %></td>
+			<td><%=title %></td>
+			<td><%=writer %></td>
+			<td><%=regdate %></td>
+			<td><%=count %></td>
 		</tr>
 	</table>
 	
-		<a href="write.html">글쓰기</a>
+		<a href="write.jsp" >글쓰기</a>
 </body>
 </html>
