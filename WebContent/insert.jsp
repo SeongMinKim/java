@@ -29,6 +29,7 @@
 	
 	 Connection conn = null;
 	
+	 
 	try{
 		String url="jdbc:mysql://localhost:3306/board";
 		String driverName = "com.mysql.jdbc.Driver";
@@ -39,7 +40,8 @@
 		
 		Statement stmt = conn.createStatement();
 		
-		String sql= "Insert Into Board" + "(IDX, Title,writer,regdate, count,content)" + "Values("+2+",'"+title+"','"+writer+"', '"+regdate+"', '1', '"+content+"')";
+		String sql= "Insert Into Board" + "(IDX, Title,writer,regdate, count,content)" + 
+		"Values( board.seq.nextval ,'"+title+"','"+writer+"', sysdate , '1', '"+content+"')";
 		
 		stmt.executeUpdate(sql);
 		
@@ -48,7 +50,9 @@
 		out.println("예외쪽으로 왓다");
 		out.println(e.getMessage());
 		e.printStackTrace();
-	} 
+	} //finally{
+		//out.print("<script>location.haef='index.jsp';</script>");
+	//}
 	
 	/* Connection con = null;
 	
